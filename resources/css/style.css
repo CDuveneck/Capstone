@@ -19,6 +19,17 @@ h2, h3 {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2, h3 {
+    font-size: 24px;
+  }
+}
+
 /* Navigation */
 
 nav {
@@ -32,22 +43,19 @@ nav {
 }
 
 .nav-logo {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 32px;
-
 }
 
 .nav-logo img {
   margin-right: 0px;
-  margin-bottom: 10px;
 }
 
 .nav-logo p {
-  margin-top: 35px;
   margin-left: 0px;
 }
 
@@ -111,7 +119,7 @@ nav {
 
 #journey {
   height: auto;
-  width: 36%;
+  width: 25%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -120,17 +128,60 @@ nav {
   padding-right: 50px;
 }
 
+#journey h1 {
+  line-height: 4rem;
+}
+
 #journey p {
-  margin-left: 0px;
+  margin: 16px 0px 16px 0px;
 }
 
 #journey h2 {
+  font-weight: 400;
   color: white;
-  width: 80%;
-  padding: 8px 5px 8px 5px;
+  width: 95%;
+  padding: 8px 0px 8px 0px;
   background-color: #4a4a4a;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .banner {
+    margin: 0px 0px 0px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner img {
+    width: 100%;
+    margin: 0px;
+  }
+
+  #journey {
+    width: 90%;
+    margin: 32px 16px;
+  }
+
+  #journey h1 {
+    line-height: 2rem;
+    margin-left: 16px;
+  }
+
+  #journey p {
+    margin: 32px 0px 24px 16px;
+  }
+
+  #journey h2 {
+    font-size: 20px;
+    width: 100%;
+    padding: 8px 0px 8px 0px;
+    margin: 24px 0px 0px 16px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Services */
@@ -142,28 +193,24 @@ nav {
 }
 
 .learning {
-  width: 60%;
+  width: 65%;
   border-right: 1px solid #d8d8d8;
-  margin-bottom: 32px;
-  border: 1px solid black;
 }
 
 .learning img {
   height: auto;
-  width: 60%;
+  width: 95%;
   margin: 32px 24px;
 }
 
 #learning-text {
   height: auto;
-  width: 60%;
+  width: auto;
   margin: 32px 24px;
-  border: 1px solid black;
 }
 
 #learning-text p {
-  margin-left: 0px;
-  margin-top: 24px;
+  margin: 24px 0px 64px 0px;
   word-wrap: normal;
 }
 
@@ -187,6 +234,7 @@ nav {
   height: auto;
   width: 35%;
   margin: 16px;
+  object-fit: fill;
 }
 
 .serivce-type-text {
@@ -194,6 +242,29 @@ nav {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  text-decoration: none;
+}
+
+.service-type-text h2 {
+  margin-bottom: 8px;
+}
+
+.serivce-type-text p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.serivce-type-text span {
+  margin-top: 8px;
+
+}
+
+#orientation {
+  border-bottom: 2px solid #d8d8d8;
+}
+
+#orientation img {
+  margin-top: 0px;
 }
 
 #lecture {
@@ -201,8 +272,41 @@ nav {
 }
 
 @media only screen and (max-width: 480px) {
+
   .learning {
     display: none;
+  }
+
+  .service {
+    width: auto;
+    margin: 16px 16px 0px 16px;
+  }
+
+  .service-type {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .service-type img {
+    height: 230px;
+    width: auto;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .serivce-type-text {
+    margin-left: 16px;
+    margin-bottom: 64px;
+  }
+
+  #orientation {
+    border-bottom: none;
+  }
+
+  #lecture {
+    background-color: white;
   }
 }
 
@@ -215,38 +319,42 @@ nav {
   text-align: center;
   background-color: #d8d8d8;
 }
+
 .courses h1 {
-  justify-content: center;
   margin: 32px 0px;
 }
 
 .course {
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 2;
   margin: 32px 72px;
+  justify-content: center;
 }
 
 .course-type {
-  margin: 0px 32px 32px 32px;
-  background-color: white;
-  justify-content: center;
+  height: auto;
+  width: 28%;
   text-align: left;
-  word-wrap: normal;
+  word-wrap: wrap;
+  background-color: white;
+  margin: 0px 32px 32px 32px;
 }
 
 .course-type img {
   height: auto;
-  margin-bottom: 16px;
+  width: 100%;
+  margin: 0px;
 }
 
-.course-type div {
-  margin-top: 16px;
-  margin-bottom: 24px;
+.course-type-text {
+  width: 100%;
+  word-wrap: normal;
+  margin: 16px 16px 24px 16px;
+}
+
+.course-type-text h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .course-type span {
@@ -255,8 +363,7 @@ nav {
 
 .course-type p {
   margin-top: 8px;
-  margin-left: 0px;
-  word-wrap: normal;
+  word-wrap: break-word;
 }
 
 .courses-mobile {
@@ -267,6 +374,7 @@ nav {
 
   .courses {
     background-color: white;
+    border-top: 1px solid #d8d8d8;
   }
 
   .course {
@@ -274,16 +382,20 @@ nav {
   }
 
   .courses-mobile {
-    margin-top: 16px;
+    margin: 16px 16px 32px 16px;
     display: flex;
     flex-direction: column;
   }
 
   .courses-mobile span {
-    width: 100%;
+    font-weight: bold;
+    width: 92%;
     padding: 16px 16px 24px 16px;
     margin-bottom: 8px;
     background-color: #d8d8d8;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
   }
 }
 /* Thesis Exhibits */
@@ -306,32 +418,86 @@ nav {
 
 .imagine {
   width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  margin-bottom: 32px;
+  margin-right: 24px;
 }
 
 .imagine video {
   height: auto;
-  width: 60%;
-  margin: 32px 24px 24px 24px;
+  width: 100%;
+  margin: 0px 0px 24px 24px;
 }
 
 #imagine-text {
+  width: 60%;
+  margin-left: 24px;
   display: flex;
   flex-direction: column;
 }
 
+#imagine-text h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
 .exhibit {
+  width: 40%;
+  margin-left: 24px;
   display: flex;
   flex-direction: column;
+}
+
+.exhibit-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.exhibit-content img {
+  height: auto;
+  width: 35%;
+  margin: 16px;
+}
+
+.exhibit-content-text {
+  width: 65%;
+  margin-left: 16px;
+}
+
+.exhibit-content-text h2 {
+  font-size: 32px;
+  line-height: 2.5rem;
+  margin-bottom: 8px;
+}
+
+#prototype {
+  background-color: #d8d8d8;
 }
 
 @media only screen and (max-width: 480px) {
 
+  .thesis {
+    margin: 0px;
+    border-top: 1px solid #d8d8d8;
+  }
+
+  .thesis h1 {
+    margin-bottom: 16px;
+  }
+
+  .imagine {
+    width: 100%;
+    margin-right: 0px;
+  }
+
   .imagine video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
-    width: 100%
+    width: 100%;
+    margin: 0px;
   }
 
   #imagine-text {
@@ -370,8 +536,10 @@ footer p {
 @media only screen and (max-width: 480px) {
 
   footer {
+    border-top: 1px solid black;
     justify-content: center;
-    padding-top: 24px;
+    align-items: center;
+    padding-top: 0px;
     border-top: none;
   }
 
